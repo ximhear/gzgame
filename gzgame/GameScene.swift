@@ -11,5 +11,14 @@ import GameplayKit
 class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
+        let background = SKSpriteNode(imageNamed: "background_1")
+        background.position = CGPoint.zero
+        background.anchorPoint = .zero
+        addChild(background)
+        
+        let foreground = SKSpriteNode(imageNamed: "foreground_1")
+        foreground.anchorPoint = .init(x: 0, y: 0.0)
+        foreground.position = .zero
+        addChild(foreground)
     }
 }

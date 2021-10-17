@@ -15,7 +15,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         if let view = self.view as? SKView {
-            let scene = GameScene(size: view.bounds.size)
+            let scene = GameScene(size: CGSize(width: 1336, height: 1024))
+//            let scene = GameScene(size: view.bounds.size)
             scene.scaleMode = .aspectFill
             scene.backgroundColor = .init(red: 105/255, green: 157/255, blue: 181/255, alpha: 1.0)
             view.presentScene(scene)
