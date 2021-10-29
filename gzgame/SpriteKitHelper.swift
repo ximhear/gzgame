@@ -28,4 +28,21 @@ extension SKSpriteNode {
         }
         return textureArray
     }
+    
+    func startAnimation(textures: [SKTexture], speed: Double, name: String, count: Int, resize: Bool, restore: Bool) {
+        if action(forKey: name) == nil {
+            let animation = SKAction.animate(with: textures, timePerFrame: speed, resize: resize, restore: restore)
+            if count == 0 {
+                let repeatAction = SKAction.repeatForever(animation)
+                run(repeatAction, withKey: name)
+            }
+            else if count == 1 {
+                run(animation, withKey: name)
+            }
+            else {
+                let repeatAction = SKAction.repeat(animation, count: count)
+                run(repeatAction, withKey: name)
+            }
+        }
+    }
 }
