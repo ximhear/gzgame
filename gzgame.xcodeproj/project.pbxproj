@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6EEE9D272C4EB400CB552B /* SpriteKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EEE9C272C4EB400CB552B /* SpriteKitHelper.swift */; };
 		ECB8F4CD272728E900837E6E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8F4CC272728E900837E6E /* Player.swift */; };
 		ECBBECCE2719E0A500A682E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBECCD2719E0A500A682E9 /* AppDelegate.swift */; };
 		ECBBECD42719E0A500A682E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBECD32719E0A500A682E9 /* GameScene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC6EEE9C272C4EB400CB552B /* SpriteKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitHelper.swift; sourceTree = "<group>"; };
 		ECB8F4CC272728E900837E6E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		ECBBECCA2719E0A500A682E9 /* gzgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gzgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBECCD2719E0A500A682E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				ECBBECD72719E0A500A682E9 /* Main.storyboard */,
 				ECBBECDA2719E0A800A682E9 /* Assets.xcassets */,
 				ECB8F4CC272728E900837E6E /* Player.swift */,
+				EC6EEE9C272C4EB400CB552B /* SpriteKitHelper.swift */,
 				ECBBECDC2719E0A800A682E9 /* LaunchScreen.storyboard */,
 			);
 			path = gzgame;
@@ -142,6 +145,7 @@
 				ECB8F4CD272728E900837E6E /* Player.swift in Sources */,
 				ECBBECD42719E0A500A682E9 /* GameScene.swift in Sources */,
 				ECBBECD62719E0A500A682E9 /* GameViewController.swift in Sources */,
+				EC6EEE9D272C4EB400CB552B /* SpriteKitHelper.swift in Sources */,
 				ECBBECCE2719E0A500A682E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
