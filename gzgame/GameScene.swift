@@ -12,7 +12,11 @@ class GameScene: SKScene {
     
     let player = Player()
     let playerSpeed: CGFloat = 2.5
-    var level: Int = 1
+    // Player movement
+    var movingPlayer = false
+    var lastPosition: CGPoint?
+    
+    var level: Int = 8
     var numberOfDrops: Int = 10
     var dropSpeed: CGFloat = 1
     var minDropSpeed: CGFloat = 0.12
@@ -41,18 +45,9 @@ class GameScene: SKScene {
     }
     
     func touchDown(atPoint pos: CGPoint) {
-        let distance = abs(pos.x - player.position.x)
-        let calculatedSpeed = TimeInterval(distance / playerSpeed) / 255.0
-        
-        if pos.x < player.position.x {
-            player.moveToPosition(pos: pos,
-                                  direction: .left,
-                                  speed: calculatedSpeed)
-        }
-        else {
-            player.moveToPosition(pos: pos,
-                                  direction: .right,
-                                  speed: calculatedSpeed)
+        let touchedNode = atPoint(pos)
+        if touchedNode.name == "player" {
+            movingPlayer = true
         }
     }
     
@@ -60,6 +55,45 @@ class GameScene: SKScene {
         for t in touches {
             self.touchDown(atPoint: t.location(in: self))
         }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            self.touchMoved(toPoint: t.location(in: self))
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            self.touchUp(atPoint: t.location(in: self))
+        }
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            self.touchUp(atPoint: t.location(in: self))
+        }
+    }
+    
+    func touchMoved(toPoint pos: CGPoint) {
+        if movingPlayer == true {
+            let newPos = CGPoint(x: pos.x, y: player.position.y)
+            player.position = newPos
+            
+            let recordedPosition = lastPosition ?? player.position
+            if recordedPosition.x > newPos.x {
+                player.xScale = -abs(xScale)
+            }
+            else {
+                player.xScale = abs(xScale)
+            }
+            
+            lastPosition = newPos
+        }
+    }
+    
+    func touchUp(atPoint pos: CGPoint) {
+        movingPlayer = false
     }
     
     func spawnGloop() {
