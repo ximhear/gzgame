@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC6EEE9D272C4EB400CB552B /* SpriteKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EEE9C272C4EB400CB552B /* SpriteKitHelper.swift */; };
 		EC83583E2738250D00BFB62B /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC83583D2738250D00BFB62B /* Collectible.swift */; };
+		EC8358402738333100BFB62B /* GZLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC83583F2738333100BFB62B /* GZLog.swift */; };
 		ECB8F4CD272728E900837E6E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8F4CC272728E900837E6E /* Player.swift */; };
 		ECBBECCE2719E0A500A682E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBECCD2719E0A500A682E9 /* AppDelegate.swift */; };
 		ECBBECD42719E0A500A682E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBECD32719E0A500A682E9 /* GameScene.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		EC6EEE9C272C4EB400CB552B /* SpriteKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitHelper.swift; sourceTree = "<group>"; };
 		EC83583D2738250D00BFB62B /* Collectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectible.swift; sourceTree = "<group>"; };
+		EC83583F2738333100BFB62B /* GZLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZLog.swift; sourceTree = "<group>"; };
 		ECB8F4CC272728E900837E6E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		ECBBECCA2719E0A500A682E9 /* gzgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gzgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBECCD2719E0A500A682E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		ECBBECCC2719E0A500A682E9 /* gzgame */ = {
 			isa = PBXGroup;
 			children = (
+				EC83583F2738333100BFB62B /* GZLog.swift */,
 				ECBBECCD2719E0A500A682E9 /* AppDelegate.swift */,
 				ECBBECD32719E0A500A682E9 /* GameScene.swift */,
 				ECBBECD52719E0A500A682E9 /* GameViewController.swift */,
@@ -147,6 +150,7 @@
 			files = (
 				ECB8F4CD272728E900837E6E /* Player.swift in Sources */,
 				ECBBECD42719E0A500A682E9 /* GameScene.swift in Sources */,
+				EC8358402738333100BFB62B /* GZLog.swift in Sources */,
 				EC83583E2738250D00BFB62B /* Collectible.swift in Sources */,
 				ECBBECD62719E0A500A682E9 /* GameViewController.swift in Sources */,
 				EC6EEE9D272C4EB400CB552B /* SpriteKitHelper.swift in Sources */,
